@@ -10,10 +10,33 @@
       rel="stylesheet"
     />
 
-    <title>TypeScript Animation</title>
+    <title>Typescript Animation</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body></body>
+  <body>
+    <!--TypeScript Animation  -->
+    <div class="container">
+      <h1>I'm <span class="auto-type"></span></h1>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+      var typed = new Typed(".auto-type", {
+        strings: [
+          "Alp Cagatay",
+          "a Business Analyst - CCBA®",
+          "a Software Engineer - MSc",
+          "a Scrum Master - PSM™ I",
+          "a Product Owner - PSPO™ I",
+        ],
+        typeSpeed: 75,
+        backSpeed: 75,
+        loop: true,
+      });
+    </script>
+    <!--TypeScript Animation  -->
+  </body>
 </html>
