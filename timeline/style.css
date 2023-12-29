@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* experience.html */
+.timeline-section {
+  min-height: 100vh;
+  padding: 100px 15px;
+}
+
+.timeline-items {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.timeline-items::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #696868;
+  left: calc(50% - 1px);
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+}
+
+.timeline-dot {
+  height: 32px;
+  width: 32px;
+  border: 2px solid #1380ac;
+  background-color: #ffffff;
+  position: absolute;
+  left: calc(50% - 16px);
+  border-radius: 50%;
+  top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Center the content vertically */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.timeline-dot img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.timeline-date {
+  font-size: 18px;
+  color: #1380ac;
+  margin: 6px 0 15px;
+}
+
+.timeline-content {
+  background-color: transparent;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.timeline-content h3 {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 0 10px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.timeline-content p {
+  color: #353535;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.contentdetails {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.icon-even {
+  float: right;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.icon-odd {
+  float: left;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+@media (max-width: 1100px) {
+  .icon-acc img {
+    width: 75px;
+    margin-left: 10px;
+  }
+
+  .contentdetails-acc {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .timeline-items-acc::before {
+    left: 7px;
+  }
+
+  .timeline-item-acc:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timeline-item-acc:nth-child(odd),
+  .timeline-item-acc:nth-child(even) {
+    padding-left: 37px;
+  }
+
+  .timeline-dot-acc {
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-25%);
+    /* Adjust for centering */
+  }
+
+  .timeline-dot-acc {
+    left: 0;
+  }
+
+  .icon-even-acc {
+    float: left;
+    margin-left: 10px;
+  }
+
+  .icon-odd-acc {
+    float: left;
+    margin-right: 10px;
+  }
+}
