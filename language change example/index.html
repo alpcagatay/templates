@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language Selection</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Welcome to My Website</h1>
+    </header>
+
+    <div id="content">
+      <p id="englishContent">This is the content of the website in English.</p>
+      <p id="turkishContent" style="display: none">Türkçe İçerik</p>
+    </div>
+
+    <div id="language-selection">
+      <button id="toggleLanguage" onclick="toggleLanguage()">English</button>
+    </div>
+
+    <script>
+      var currentLanguage = "en";
+
+      function toggleLanguage() {
+        currentLanguage = currentLanguage === "en" ? "tr" : "en";
+
+        // Update the content based on the selected language
+        document.getElementById("englishContent").style.display =
+          currentLanguage === "en" ? "block" : "none";
+        document.getElementById("turkishContent").style.display =
+          currentLanguage === "tr" ? "block" : "none";
+
+        // Update the button text based on the selected language
+        document.getElementById("toggleLanguage").innerText =
+          currentLanguage === "en" ? "English" : "Turkish";
+      }
+    </script>
+  </body>
+</html>
