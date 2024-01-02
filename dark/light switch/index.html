@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dark/Light Mode Switch</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <input type="checkbox" id="modeSwitch" class="switch" />
-    <label for="modeSwitch" class="slider"></label>
-
     <div class="container">
       <h1>Website Content</h1>
+      <label class="switch">
+        <input type="checkbox" id="modeSwitch" />
+        <span class="slider">
+          <span class="icon" id="icon"></span>
+        </span>
+      </label>
       <p>Toggle Dark/Light Mode</p>
 
       <div class="example-content">
@@ -23,5 +26,7 @@
         </ul>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
