@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   transition: background-color 0.5s ease, color 0.5s ease;
   margin: 0;
   display: flex;
@@ -59,11 +59,6 @@ h1 {
   position: absolute;
 }
 
-.icon:before {
-  content: '🌙'; /* Default moon icon */
-  font-size: 18px;
-}
-
 .slider:before {
   position: absolute;
   content: "";
@@ -98,8 +93,4 @@ input:checked ~ .container ul {
 input:checked ~ .container .example-content {
   background-color: #111; /* Dark mode example content background color */
   color: #fff; /* Dark mode example content text color */
-}
-
-input:checked ~ .slider .icon:before {
-  content: '☀️'; /* Sun icon when in dark mode */
 }
