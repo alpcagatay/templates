@@ -1,0 +1,20 @@
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.adjustable-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#text-size-controls {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
