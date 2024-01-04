@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Adjustable Text Size</title>
+  </head>
+  <body>
+    <div class="adjustable-text" id="text-container">
+      <p>
+        This is an example text. You can adjust the font size using the buttons
+        below.
+      </p>
+    </div>
+
+    <div id="text-size-controls">
+      <button onclick="adjustTextSize('increase')">Increase Font Size</button>
+      <button onclick="adjustTextSize('decrease')">Decrease Font Size</button>
+    </div>
+
+    <script>
+      let currentFontSize = 16;
+
+      function adjustTextSize(action) {
+        const textContainer = document.getElementById("text-container");
+        if (action === "increase") {
+          currentFontSize += 2;
+        } else if (action === "decrease") {
+          currentFontSize -= 2;
+        }
+
+        textContainer.style.fontSize = `${currentFontSize}px`;
+      }
+    </script>
+  </body>
+</html>
