@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Image Slider</title>
+  </head>
+  <body>
+    <div id="slider-container">
+      <div id="slider">
+        <div class="slide"><img src="image1.jpg" alt="Image 1" /></div>
+        <div class="slide"><img src="image2.jpg" alt="Image 2" /></div>
+        <div class="slide"><img src="image3.jpg" alt="Image 3" /></div>
+        <!-- Add more slides as needed -->
+      </div>
+
+      <div id="prev" class="arrow" onclick="prevSlide()">&#9665;</div>
+      <div id="next" class="arrow" onclick="nextSlide()">&#9655;</div>
+    </div>
+
+    <script>
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        const slider = document.getElementById("slider");
+        const slides = document.querySelectorAll(".slide");
+        if (index >= slides.length) {
+          currentSlide = 0;
+        } else if (index < 0) {
+          currentSlide = slides.length - 1;
+        } else {
+          currentSlide = index;
+        }
+        const translateValue = -currentSlide * 100 + "%";
+        slider.style.transform = "translateX(" + translateValue + ")";
+      }
+
+      function nextSlide() {
+        showSlide(currentSlide + 1);
+      }
+
+      function prevSlide() {
+        showSlide(currentSlide - 1);
+      }
+    </script>
+  </body>
+</html>
